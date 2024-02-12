@@ -2,9 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Exibir mensagem') {
+        stage ('Build image') {
             steps {
-                echo 'Olá! Este é um exemplo de mensagem no pipeline.'
+                script {
+                    dockerapp = docker.build("node/servidor", -'f ./Dockerfile ./src' ) 
+                    
+                }
             }
         }
     }
