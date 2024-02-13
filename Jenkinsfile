@@ -2,11 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage ('Build image') {
+        stage ('Deploy application') {
             steps {
-                script {
-                    dockerapp = docker.build("node/servidor", "--file ./Dockerfile ./" ) 
-                }
+                sh 'docker-compose up -d --build'
             }
         }
     }
