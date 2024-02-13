@@ -5,7 +5,6 @@ pipeline {
         webhook('GitHub')
     }
 
-
     stages {
         stage ('Build image') {
             steps {
