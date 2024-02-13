@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage ('list files') {
+            steps {
+                sh 'ls -l'
+            }
+        }
+
         stage ('Build image') {
             steps {
                 script {
