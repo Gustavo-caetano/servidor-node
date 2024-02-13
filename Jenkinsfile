@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        webhook('GitHub')
+    }
+
     stages {
         stage ('Build image') {
             steps {
