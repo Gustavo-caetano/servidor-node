@@ -20,6 +20,10 @@ app.get('/on',(req, res) => {
     res.send("funcionando porta on")
 })
 
+app.get('/uma',(req, res) => {
+    res.send("funcionando porta uma")
+})
+
 app.listen(PORT, () => {
     console.log("iniciou")
 })
