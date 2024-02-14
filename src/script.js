@@ -16,6 +16,10 @@ app.get('/tv',(req, res) => {
     res.send("funcionando porta teste")
 })
 
+app.get('/on',(req, res) => {
+    res.send("funcionando porta on")
+})
+
 app.listen(PORT, () => {
     console.log("iniciou")
 })
