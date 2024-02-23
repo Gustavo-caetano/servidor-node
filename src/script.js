@@ -8,6 +8,7 @@ app.get('/',(req, res) => {
     res.send("funcionando")
 })
 
+
 app.get('/teste',(req, res) => {
     res.send("funcionando porta teste")
 })
